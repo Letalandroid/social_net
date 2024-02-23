@@ -2,11 +2,9 @@
 
 namespace Letalandroid\controllers;
 
-require_once '../model/Database.php';
-
+require_once './model/Database.php';
 use Letalandroid\model\Database;
 use PDO;
-use DateTime;
 
 class Usuario extends Database {
     private string $id;
@@ -14,13 +12,13 @@ class Usuario extends Database {
     private string $password;
     private string $username;
     private string $descripcion;
-    private DateTime $fechaRegistro;
+    private string $fechaRegistro;
 
     public function __construct(private string $cor,
      private string $psw,
      string $username = '',
      string $descripcion = '',
-     DateTime $fechaRegistro = null) {
+     string $fechaRegistro = '') {
 
         parent::__construct();
 
