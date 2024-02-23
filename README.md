@@ -1,4 +1,4 @@
-# 🌐 Social Net
+# 🌐Social Net
 Un intento de una red social minimal llevando a cabo el CRUD con PHP a MySQL
 
 ## Run
