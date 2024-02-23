@@ -1,6 +1,10 @@
 <?php
 
+require_once './controller/Usuario.php';
 
+use Letalandroid\controllers\Usuario;
+
+$user;
 
 ?>
 
@@ -32,6 +36,10 @@
         }
     </script>
     <script src="https://kit.fontawesome.com/8b1c082df7.js" crossorigin="anonymous"></script>
+    <script>
+        document.cookie=`user_id=${localStorage.getItem('user_id')}`;
+    </script>
+    <?php $user = Usuario::getUser($_COOKIE['user_id'])[0]->getUsername() ?>
 </head>
 
 <body class="bg-background">
@@ -44,7 +52,12 @@
     <main>
         <div class='flex justify-center'>
             <form action="/social_net/index.php" method="post" class="flex justify-center items-start mt-3 px-6 py-5 gap-5 bg-[#3b332f] rounded">
-                <img width="50" class="bg-[#888] rounded-full" src="./assets/profile.svg" alt="profile">
+                <div>
+                    <img width="50" class="bg-[#888] rounded-full" src="./assets/profile.svg" alt="profile">
+                    <span>
+                        <?php $user ?>
+                    </span>
+                </div>
                 <div class='flex flex-col gap-5 relative'>
                     <input class="bg-transparent w-60 border-b-2 pb-2 pl-1 outline-0 text-white border-white rounded" placeholder="¿Que piensas el día de hoy?" type="text">
                     <div class='flex justify-end'>

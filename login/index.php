@@ -6,7 +6,7 @@ use Letalandroid\controllers\Usuario;
 
 $error = false;
 $message = '';
-$cunt = 0;
+$count = 0;
 $user;
 
 if (
