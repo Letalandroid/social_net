@@ -1,0 +1,15 @@
+{
+	"name": "social_net",
+	"version": "1.0.0",
+	"description": "Un intento de una red social minimal llevando a cabo el CRUD con PHP a MySQL",
+	"main": "index.js",
+	"scripts": {
+		"build": "docker build -t social_net . && echo '🔨 Build complete'",
+		"start": "docker run -dit -p 41062:80 social_net",
+		"delete": "docker stop 32c && docker rm 32c && echo '\n˕ Delete'",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
